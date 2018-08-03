@@ -1,0 +1,18 @@
+
+
+Step 1:  List account name for sale
+    - Creates new record in smart contract
+    - Assigns owner and active key of 
+Step 2:  
+
+
+
+
+Issues:
+    - What if there are more than owner and active keys? We would want 
+
+
+
+
+
+cleos system buyram eosbay eosbay "100.0000 EOS"

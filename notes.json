@@ -1,0 +1,51 @@
+{
+    "account": "myaccount",
+    "permission": "owner",
+    "parent": "",
+    "auth": {
+        "keys": [
+            {
+                "key": "EOS7ckzf4BMgxjgNSYV22rtTXga8R9Z4XWVhYp8TBgnBi2cErJ2hn",
+                "weight": 1
+            }
+        ],
+        "threshold": 1,
+        "accounts": [
+            {
+                "permission": {
+                    "actor": "myaccount",
+                    "permission": "owner"
+                },
+                "weight": 1
+            }
+        ],
+        "waits": []
+    }
+}' -p rider1
+
+
+
+cleos push action eosio updateauth '{
+    "account": "rider3",
+    "permission": "active",
+    "parent": "owner",
+    "auth": {
+        "keys": [
+            {
+                "key": "EOS7ckzf4BMgxjgNSYV22rtTXga8R9Z4XWVhYp8TBgnBi2cErJ2hn",
+                "weight": 1
+            }
+        ],
+        "threshold": 1,
+        "accounts": [
+            {
+                "permission": {
+                    "actor": "myaccount",
+                    "permission": "eosio.code"
+                },
+                "weight": 1
+            }
+        ],
+        "waits": []
+    }
+}' -p rider3
